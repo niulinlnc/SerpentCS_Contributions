@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<openerp>
-    <data>
-        
+<odoo>
+
         <!-- Label brand tree view -->
-        <record id="view_label_brand_tree" model="ir.ui.view" >
+        <record id="view_label_brand_tree" model="ir.ui.view">
             <field name="name">label.brand.tree</field>
             <field name="model">label.brand</field>
             <field name="arch" type="xml">
@@ -12,25 +11,27 @@
                 </tree>
             </field>
         </record>
-        
+
         <!-- Label brand form view -->
-        <record id="view_label_brand_form" model="ir.ui.view" >
+        <record id="view_label_brand_form" model="ir.ui.view">
             <field name="name">label.brand.form</field>
             <field name="model">label.brand</field>
             <field name="arch" type="xml">
                 <form string="Label Configuration">
-                    <group colspan="4" col="4">
-                        <field name="brand_name"/>
+                    <sheet>
+                        <group cols="4">
+                            <field name="brand_name"/>
+                        </group>
                         <newline/>
-                        <separator colspan="4" string="Label Config"/>
-                        <field name="label_config_ids" nolabel="1" colspan="4"/>
-                    </group>
+                        <separator string="Label Config"/>
+                        <field name="label_config_ids" colspan="4" nolabel="1"/>
+                    </sheet>
                 </form>
             </field>
         </record>
-        
-        <!-- Label Configration Form View -->
-        <record id="view_label_config_form" model="ir.ui.view" >
+
+        <!-- Label Configuration Form View -->
+        <record id="view_label_config_form" model="ir.ui.view">
             <field name="name">label.config.form</field>
             <field name="model">label.config</field>
             <field name="arch" type="xml">
@@ -50,9 +51,9 @@
                 </form>
             </field>
         </record>
-        
-        <!-- Label Configration Tree View -->
-        <record id="view_label_config_tree" model="ir.ui.view" >
+
+        <!-- Label Configuration Tree View -->
+        <record id="view_label_config_tree" model="ir.ui.view">
             <field name="name">label.config.tree</field>
             <field name="model">label.config</field>
             <field name="arch" type="xml">
@@ -68,16 +69,17 @@
                 </tree>
             </field>
         </record>
-        
-        <record id="action_label_config_form" model="ir.actions.act_window" >
+
+        <!-- Label brand Action -->
+        <record id="action_label_config_form" model="ir.actions.act_window">
             <field name="name">Label Configuration</field>
             <field name="res_model">label.brand</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-        
-        <menuitem id="menu_config" name="Configuration" parent="base.menu_administration" sequence="2" />
+
+        <!-- Menu Details -->
+        <menuitem id="menu_config" name="Configuration" parent="base.menu_administration" sequence="2"/>
         <menuitem id="menu_label_config_view" action="action_label_config_form" parent="menu_config"/>
-        
-    </data>
-</openerp>
+
+</odoo>

@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# See LICENSE file for full copyright and licensing details.
 
-from openerp import models, fields
+from odoo import fields, models
 
-class res_request(models.Model):
+
+class ResRequest(models.Model):
     _name = 'res.request'
     _order = 'date desc'
     _description = 'Request'
