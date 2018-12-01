@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem id="synch_config" name="Synchronization"
-              parent="base.menu_administration" sequence="30"/>
+    <!-- <menuitem id="synch_config" name="Synchronization" -->
+              <!-- parent="base_synchro.next_id_62" sequence="10"/> -->
 
     <record id="view_transfer_line_form" model="ir.ui.view">
         <field name="name">base.synchro.obj.line.form</field>
         <field name="model">base.synchro.obj.line</field>
         <field name="arch" type="xml">
-            <form string="Transfered IDs Details" create="false" edit="false">
+            <form string="Transfered IDs Details" create="0" edit="0">
                 <sheet>
                     <group col="4">
                         <field name="name"/>
@@ -25,7 +25,7 @@
         <field name="name">base.synchro.obj.line.tree</field>
         <field name="model">base.synchro.obj.line</field>
         <field name="arch" type="xml">
-            <tree string="Transfered IDs Details" create="false" edit="false">
+            <tree string="Transfered IDs Details" create="0" edit="0">
                 <field name="name"/>
                 <field name="obj_id"/>
                 <field name="local_id"/>
@@ -188,6 +188,6 @@
     </record>
 
     <menuitem action="action_base_synchro_server_tree" id="synchro_server_tree_menu_id"
-              parent="base_synchro.synch_config"/>
+              parent="base_synchro.next_id_62" sequence="0"/>
 
 </odoo>

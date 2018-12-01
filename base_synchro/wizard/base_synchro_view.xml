@@ -37,10 +37,10 @@
         <field name="model">base.synchro</field>
         <field name="arch" type="xml">
             <form string="Synchronization Completed!">
-                <label
+                <label for="name"
                         string="The synchronisation has been started. You will receive a request when it's done."/>
                 <footer>
-                    <button string="Cancel" class="oe_link" special="cancel"/>
+                    <button string="Close" class="oe_link" special="cancel"/>
                 </footer>
             </form>
         </field>
