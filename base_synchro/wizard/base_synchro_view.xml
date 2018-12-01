@@ -38,7 +38,7 @@
         <field name="arch" type="xml">
             <form string="Synchronization Completed!">
                 <label for="name"
-                        string="The synchronisation has been started. You will receive a request when it's done."/>
+                        string="The synchronization Completed!"/>
                 <footer>
                     <button string="Close" class="oe_link" special="cancel"/>
                 </footer>
